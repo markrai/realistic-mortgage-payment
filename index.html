@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Realistic Mortgage Payment Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h2>Realistic Mortgage Payment</h2>
+    <table id="table">
+
+        <tr>
+            <form>
+                <td>Price:</td>
+                <td> <input type="number" min="0" step="1000" value="435000" id="price" onchange="calcDownPayment()" />
+                </td>
+            </form>
+
+        </tr>
+        <tr>
+            <form>
+                <td>Down Payment:</td>
+                <td> <input type="number" min="0" step="1000" value="87000" id="downpayment" /> </td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>Interest Rate:</td>
+                <td> <input type="number" min="0" step="0.05" value="3.5" id=interest class="interest" /> </td>
+                <td>%</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>Mortgage Term:</td>
+                <td><input type="number" min="1" step="1" value="30" id=term /> </td>
+                <td>years</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>HOA:</td>
+                <td><input type="number" min="0.01" step="1" value="82" id="hoa" /></td>
+                <td>monthly</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>Property Tax Rate:</td>
+                <td><input type="number" min="0.01" step="0.0001" value="1.2916" id="propertytaxrate" title="Sample Values for 2020: Rockville, MD: 1.2916%
+                        Germantown, MD: 1.1032%" />
+                </td>
+                <td>%</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>Property Tax*:</td>
+                <td><input type="text" min="0.01" step="0.0001" placeholder="auto-generated" id="propertytax"
+                        title="Property tax is based on the combined property tax rates of your city, county and state." />
+                </td>
+                <td>yearly</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>Estimated Repairs:**</td>
+                <td><input type="number" placeholder="auto-generated" id="repairs" /></td>
+                <td>Monthly</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td> Homeowners Insurance:</td>
+                <td><input type="number" min="0.01" step="0.01" value="866" id="insurance" /></td>
+                <td>yearly</td>
+            </form>
+        </tr>
+
+        <tr>
+            <form>
+                <td>Utilities:***</td>
+                <td><input type="number" min="0.01" step="0.01" value="350" id="utilities" /></td>
+                <td>monthly avg.</td>
+            </form>
+        </tr>
+    </table>
+
+    <br>
+    <button type="button" onClick="calcTotal()">Calculate</button>
+    <button type="button" onClick="reset()">Reset</button>
+    <br><br>
+
+    <form id="monthlyOutput">
+    </form>
+    <br>
+    <form id="closingCostOutput">
+    </form>
+
+
+    <script type="text/javascript">
+        var sc_project = 12429905;
+        var sc_invisible = 1;
+        var sc_security = "1e659405"; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/12429905/0/1e659405/1/" alt="Web Analytics"></a>
+        </div>
+    </noscript>
+
+</body>
+<div id="info">
+    <small>
+        <p>* Property Tax Rate: You can
+            <a href="https://apps.montgomerycountymd.gov/realpropertytax/" target="_blank">look-up</a> your property in
+            Montgomery County, MD.
+        </p>
+        <p>** Repairs: set aside ~1% of the assessed value on a 20+ year old home.</p>
+        <p>*** Utilities: should include electricity, gas, water, & internet bills.</p>
+    </small>
+</div>
+
+</html>

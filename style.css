@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(17, 63, 163);
+  color: white;
+}
+
+a:visited {
+  color: rgba(250, 250, 250, 0.562);  
+}
+
+a:link {
+  color: rgba(250, 250, 250, 0.562);  
+}
+
+#table {
+  font-size: 0.75em;
+}
+
+#monthlyOutput {
+  font-size: 2em;
+}
+
+#closingCostOutput {
+  font-size: 1.5em;
+}
+
+input {
+  box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%),
+    inset 0px 2px 6px -5px hsl(0, 0%, 2%);
+  border-radius: 5px;
+  height: 20px;
+  width: 15ch;
+  font-size: 14pt;
+}
+
+button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #000000;
+  padding: 10px 35px;
+  font-size: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+}
+
+.interest {
+  position: relative;
+}
+
+.interest:hover:after {
+  position: absolute;
+  content: attr(title);
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+#info {
+  color: rgba(250, 250, 250, 0.562);  
+}
